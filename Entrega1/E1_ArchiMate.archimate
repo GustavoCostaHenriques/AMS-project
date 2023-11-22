@@ -19,23 +19,6 @@
     <element xsi:type="archimate:BusinessActor" name="Distribuidor" id="id-52bf6889062640c7a45878778f2d42b0"/>
     <element xsi:type="archimate:BusinessActor" name="SuperShop" id="id-049eb2d6b6b94e509bfbca50fe46b750"/>
     <element xsi:type="archimate:BusinessActor" name="Cliente" id="id-b9f35007b1a1486686a3110a10a2b078"/>
-    <element xsi:type="archimate:BusinessActor" name="DirT (copy)" id="id-0c3f05d0147c4b598e89e6daa6204ce8"/>
-    <element xsi:type="archimate:BusinessActor" name="DOC (copy)" id="id-bfdae5d3a36a4b5c9b4cf50b1cd437a7"/>
-    <element xsi:type="archimate:BusinessActor" name="Loja (copy)" id="id-d2dae4510e704f07a6a237329d74e836"/>
-    <element xsi:type="archimate:BusinessActor" name="UnA (copy)" id="id-b7f5bef093c2432fae7bc3ba05328b8c"/>
-    <element xsi:type="archimate:BusinessActor" name="UnV (copy)" id="id-9fd0071af3b94ff68ee59bb3e65f1827"/>
-    <element xsi:type="archimate:BusinessActor" name="UFC (copy)" id="id-da20c673579f4e689625e2aa1c82dc46"/>
-    <element xsi:type="archimate:BusinessActor" name="UGV (copy)" id="id-e688f4317a2e44488f463a2718ac15f9"/>
-    <element xsi:type="archimate:BusinessRole" name="Funcionário coordenador (copy)" id="id-9763eaa995134435b856ea268dec0dfd"/>
-    <element xsi:type="archimate:BusinessRole" name="Funcionário operacional (copy)" id="id-3a09762dc00646069bd770226f4bc03a"/>
-    <element xsi:type="archimate:BusinessRole" name="Funcionário (copy)" id="id-8a7be955b8b84262a407db003dfd6ef0"/>
-    <element xsi:type="archimate:BusinessActor" name="Unidade (copy)" id="id-0bc27df4c36d4b338389bf57d0dea566"/>
-    <element xsi:type="archimate:BusinessActor" name="Direção (copy)" id="id-7a770d6acfc1429183b05939e564a85c"/>
-    <element xsi:type="archimate:BusinessActor" name="Fornecedor (copy)" id="id-a09043aa06bf48bf89ef363d753fe72c"/>
-    <element xsi:type="archimate:BusinessActor" name="Produtor (copy)" id="id-61d96324a7dc4840b6e2595b5eb3443f"/>
-    <element xsi:type="archimate:BusinessActor" name="Distribuidor (copy)" id="id-5b568e5e96314be08594d85e0540dab1"/>
-    <element xsi:type="archimate:BusinessActor" name="SuperShop (copy)" id="id-153dcad54d624061b823155001f29d08"/>
-    <element xsi:type="archimate:BusinessActor" name="Cliente (copy)" id="id-fdb3bde8c7784fb7acb8c7f4be95c73e"/>
   </folder>
   <folder name="Application" id="id-36dcd2a9517f476f91435d49d7ad9c5f" type="application">
     <element xsi:type="archimate:ApplicationInterface" name="UI-SCM" id="id-01d2fb39e77041ed9b57847b81dc97ea"/>
@@ -69,25 +52,6 @@
     <element xsi:type="archimate:CompositionRelationship" id="id-d4c9ade0ec194396ac10cebd509afafc" source="id-049eb2d6b6b94e509bfbca50fe46b750" target="id-9bacb0b7187e44888df9719352842847"/>
     <element xsi:type="archimate:ServingRelationship" id="id-03b5ecba95784f31a2d8fa693e3d5fb8" source="id-049eb2d6b6b94e509bfbca50fe46b750" target="id-b9f35007b1a1486686a3110a10a2b078"/>
     <element xsi:type="archimate:ServingRelationship" id="id-a59424f873084378a18ce8beecbfbc0d" source="id-5749859687504e46b2cc8e38ff910e38" target="id-049eb2d6b6b94e509bfbca50fe46b750"/>
-    <element xsi:type="archimate:SpecializationRelationship" id="id-59b730b5d6ea441a9c189284d2531111" source="id-61d96324a7dc4840b6e2595b5eb3443f" target="id-a09043aa06bf48bf89ef363d753fe72c"/>
-    <element xsi:type="archimate:AssignmentRelationship" id="id-ab391ae289354cbbb97527f5e1c2a0d7" source="id-0bc27df4c36d4b338389bf57d0dea566" target="id-8a7be955b8b84262a407db003dfd6ef0"/>
-    <element xsi:type="archimate:CompositionRelationship" id="id-c032e846db884a9d9c41541d4b510f7c" source="id-d2dae4510e704f07a6a237329d74e836" target="id-9fd0071af3b94ff68ee59bb3e65f1827"/>
-    <element xsi:type="archimate:SpecializationRelationship" id="id-403a93bfc51d48eeb039f2ba35ad21b5" source="id-9763eaa995134435b856ea268dec0dfd" target="id-8a7be955b8b84262a407db003dfd6ef0"/>
-    <element xsi:type="archimate:CompositionRelationship" id="id-b4be11e6f2044a29b2f11a98fee8ec44" source="id-d2dae4510e704f07a6a237329d74e836" target="id-b7f5bef093c2432fae7bc3ba05328b8c"/>
-    <element xsi:type="archimate:ServingRelationship" id="id-95d129b1cf2441009c6fae0c2a9b7e27" source="id-d2dae4510e704f07a6a237329d74e836" target="id-fdb3bde8c7784fb7acb8c7f4be95c73e"/>
-    <element xsi:type="archimate:SpecializationRelationship" id="id-af5ac413ad1e41b3941b95d465bad2f5" source="id-bfdae5d3a36a4b5c9b4cf50b1cd437a7" target="id-7a770d6acfc1429183b05939e564a85c"/>
-    <element xsi:type="archimate:CompositionRelationship" id="id-7226e69e5e2d4dcd8bde3481a82b860d" source="id-153dcad54d624061b823155001f29d08" target="id-7a770d6acfc1429183b05939e564a85c"/>
-    <element xsi:type="archimate:ServingRelationship" id="id-d20c01d9cb3649e18051f9aabe6a22b0" source="id-a09043aa06bf48bf89ef363d753fe72c" target="id-d2dae4510e704f07a6a237329d74e836"/>
-    <element xsi:type="archimate:SpecializationRelationship" id="id-0497760879294c33b14ff4852de44a0b" source="id-9fd0071af3b94ff68ee59bb3e65f1827" target="id-0bc27df4c36d4b338389bf57d0dea566"/>
-    <element xsi:type="archimate:SpecializationRelationship" id="id-97098c2e20a04ef69ae4c5b8a7dea173" source="id-0c3f05d0147c4b598e89e6daa6204ce8" target="id-7a770d6acfc1429183b05939e564a85c"/>
-    <element xsi:type="archimate:SpecializationRelationship" id="id-9df27214947848c0972e51c79d7384d6" source="id-5b568e5e96314be08594d85e0540dab1" target="id-a09043aa06bf48bf89ef363d753fe72c"/>
-    <element xsi:type="archimate:CompositionRelationship" id="id-326b3e149b8d4a1bad6016cc79c512dd" source="id-bfdae5d3a36a4b5c9b4cf50b1cd437a7" target="id-da20c673579f4e689625e2aa1c82dc46"/>
-    <element xsi:type="archimate:AggregationRelationship" id="id-9ff0d7f1a0d540d2b36d9eeb366bb5ee" source="id-bfdae5d3a36a4b5c9b4cf50b1cd437a7" target="id-d2dae4510e704f07a6a237329d74e836"/>
-    <element xsi:type="archimate:AssignmentRelationship" id="id-7c363e66ff8047c0b9d38d7e5f5eef36" source="id-7a770d6acfc1429183b05939e564a85c" target="id-8a7be955b8b84262a407db003dfd6ef0"/>
-    <element xsi:type="archimate:SpecializationRelationship" id="id-5d86453ae10844e882268477f7bee852" source="id-3a09762dc00646069bd770226f4bc03a" target="id-8a7be955b8b84262a407db003dfd6ef0"/>
-    <element xsi:type="archimate:CompositionRelationship" id="id-5ea598cbea0d471dab594522fbae61f2" source="id-bfdae5d3a36a4b5c9b4cf50b1cd437a7" target="id-e688f4317a2e44488f463a2718ac15f9"/>
-    <element xsi:type="archimate:CompositionRelationship" id="id-c64468c837e94f30b85f984827bb3165" source="id-153dcad54d624061b823155001f29d08" target="id-0bc27df4c36d4b338389bf57d0dea566"/>
-    <element xsi:type="archimate:SpecializationRelationship" id="id-4d9d6ebf3d054704aea2532e97de721b" source="id-b7f5bef093c2432fae7bc3ba05328b8c" target="id-0bc27df4c36d4b338389bf57d0dea566"/>
     <element xsi:type="archimate:CompositionRelationship" id="id-ab7e41f4532b4ba08ad2e5011d1847cb" source="id-049eb2d6b6b94e509bfbca50fe46b750" target="id-c8792de506e54c538f835af777a68df1"/>
     <element xsi:type="archimate:CompositionRelationship" id="id-6f42a32642d44078b8ae700b64b9d5e5" source="id-049eb2d6b6b94e509bfbca50fe46b750" target="id-2744971cac4a4343b3eaf3527e0ae5c7"/>
     <element xsi:type="archimate:AssignmentRelationship" id="id-4958cb5dae9b46fcb03e8d7e2ccf3613" source="id-049eb2d6b6b94e509bfbca50fe46b750" target="id-74d7cc4c3de844ebbf01e92b1de43591"/>
