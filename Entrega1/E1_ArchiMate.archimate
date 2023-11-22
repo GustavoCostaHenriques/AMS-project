@@ -109,7 +109,7 @@
     <element xsi:type="archimate:SpecializationRelationship" id="id-f1babc8016d44a53a51435a1dc65298f" source="id-b91e156cc0cb4ac9888909222914fe75" target="id-b59a97a246ca44929e6a46d496d4455b"/>
   </folder>
   <folder name="Views" id="id-8f2947cd74534c4f8c768488d088931d" type="diagrams">
-    <element xsi:type="archimate:ArchimateDiagramModel" name="Diagrama A1" id="id-ffa82d522e5f43f1983a2afd574adbea">
+    <element xsi:type="archimate:ArchimateDiagramModel" name="Diagrama A1 (old)" id="id-ffa82d522e5f43f1983a2afd574adbea">
       <child xsi:type="archimate:DiagramObject" id="id-65a5ebcc8e6f4225a1046be9e57aabfc" archimateElement="id-c8792de506e54c538f835af777a68df1">
         <bounds x="792" y="72" width="120" height="46"/>
         <sourceConnection xsi:type="archimate:Connection" id="id-c669ee3bc9d34264a836db33f30ced2f" source="id-65a5ebcc8e6f4225a1046be9e57aabfc" target="id-5b402be781db42e083abd80c114a1b3b" archimateRelationship="id-b33cb6d7278b468c9a2a4e47fae7b538"/>
@@ -214,7 +214,7 @@
         <sourceConnection xsi:type="archimate:Connection" id="id-ca491d7852104c099492adddf5af3c1e" source="id-6604bee3b9074ecaab5ac074e4413aeb" target="id-92ad333e4b804d9684a6ad6d3dec265e" archimateRelationship="id-0f804172040f49179821ae4473e061ef"/>
       </child>
     </element>
-    <element xsi:type="archimate:ArchimateDiagramModel" name="Diagrama A1-SuperShop" id="id-bc3bab1164ad449986a0bd94eeacd807">
+    <element xsi:type="archimate:ArchimateDiagramModel" name="Diagrama A1" id="id-bc3bab1164ad449986a0bd94eeacd807">
       <child xsi:type="archimate:DiagramObject" id="id-ab765784a9614b9db1307eea97be4b5e" targetConnections="id-317d15568b9c4002a88bbe3393321780 id-d53d9b1ca905494fbf693701e250c002" archimateElement="id-5749859687504e46b2cc8e38ff910e38">
         <bounds x="780" y="297" width="120" height="55"/>
         <sourceConnection xsi:type="archimate:Connection" id="id-e6f7d7b070114e79bf96ec719cc24aea" source="id-ab765784a9614b9db1307eea97be4b5e" target="id-4b47fff298cb49009137d7462d9e332d" archimateRelationship="id-a59424f873084378a18ce8beecbfbc0d"/>
