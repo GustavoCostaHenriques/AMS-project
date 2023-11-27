@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_16vwse6" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.17.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.3.0">
+  <bpmn:collaboration id="Collaboration_006n0sk">
+    <bpmn:participant id="Participant_1qzbh6m" name="UFC" processRef="Process_0i8muq1" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_0i8muq1" isExecutable="true">
+    <bpmn:laneSet id="LaneSet_0x8n61a">
+      <bpmn:lane id="Lane_1d3yijy" name="Coordenador">
+        <bpmn:flowNodeRef>Gateway_15r6nz5</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_1ldwf4c</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_0mrgapc</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_0ogqa4k</bpmn:flowNodeRef>
+        <bpmn:childLaneSet id="LaneSet_0uabtob" />
+      </bpmn:lane>
+      <bpmn:lane id="Lane_0fahrrp" name="Funcionário operacional" />
+    </bpmn:laneSet>
+    <bpmn:exclusiveGateway id="Gateway_15r6nz5" />
+    <bpmn:dataStoreReference id="DataStoreReference_0soicw3" name="SCM" />
+    <bpmn:startEvent id="Event_1ldwf4c">
+      <bpmn:messageEventDefinition id="MessageEventDefinition_1d8fjn0" />
+    </bpmn:startEvent>
+    <bpmn:startEvent id="Event_0mrgapc" />
+    <bpmn:adHocSubProcess id="Activity_0ogqa4k">
+      <bpmn:dataOutputAssociation id="DataOutputAssociation_1a5ekwy">
+        <bpmn:targetRef>DataStoreReference_0soicw3</bpmn:targetRef>
+      </bpmn:dataOutputAssociation>
+      <bpmn:task id="Activity_0mc2zkz" name="Acesso público a documentos PDF" />
+      <bpmn:task id="Activity_03onbd6" name="Submissão de documentos" />
+    </bpmn:adHocSubProcess>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_006n0sk">
+      <bpmndi:BPMNShape id="Participant_1qzbh6m_di" bpmnElement="Participant_1qzbh6m" isHorizontal="true">
+        <dc:Bounds x="185" y="80" width="600" height="420" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_1d3yijy_di" bpmnElement="Lane_1d3yijy" isHorizontal="true">
+        <dc:Bounds x="215" y="80" width="570" height="220" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_0fahrrp_di" bpmnElement="Lane_0fahrrp" isHorizontal="true">
+        <dc:Bounds x="215" y="300" width="570" height="200" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0vwzt3e_di" bpmnElement="Gateway_15r6nz5" isMarkerVisible="true">
+        <dc:Bounds x="575" y="195" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="DataStoreReference_0soicw3_di" bpmnElement="DataStoreReference_0soicw3">
+        <dc:Bounds x="575" y="115" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="588" y="172" width="25" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1ldwf4c_di" bpmnElement="Event_1ldwf4c">
+        <dc:Bounds x="662" y="244" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0abp50p_di" bpmnElement="Event_0mrgapc">
+        <dc:Bounds x="682" y="152" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0vhfyaw_di" bpmnElement="Activity_0ogqa4k" isExpanded="true">
+        <dc:Bounds x="250" y="100" width="260" height="180" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0mc2zkz_di" bpmnElement="Activity_0mc2zkz">
+        <dc:Bounds x="270" y="150" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_03onbd6_di" bpmnElement="Activity_03onbd6">
+        <dc:Bounds x="390" y="150" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="DataOutputAssociation_1a5ekwy_di" bpmnElement="DataOutputAssociation_1a5ekwy">
+        <di:waypoint x="510" y="140" />
+        <di:waypoint x="575" y="140" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
