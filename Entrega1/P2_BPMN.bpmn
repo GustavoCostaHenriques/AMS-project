@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:bioc="http://bpmn.io/schema/bpmn/biocolor/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1dwngh5" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.17.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.20.0">
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:bioc="http://bpmn.io/schema/bpmn/biocolor/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1dwngh5" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.16.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.20.0">
   <bpmn:collaboration id="Collaboration_00jgj30">
     <bpmn:participant id="Participant_1barfoj" name="Coordenador da DOC" processRef="Process_0gqf4ij" />
     <bpmn:participant id="Participant_0d9s75k" name="UFC" processRef="Process_1ya5vua" />
@@ -123,6 +123,15 @@
       <bpmn:incoming>Flow_0e57eor</bpmn:incoming>
       <bpmn:outgoing>Flow_03dwk15</bpmn:outgoing>
     </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_0pckxns" sourceRef="Event_0pcurrs" targetRef="Gateway_1lsx5hg" />
+    <bpmn:sequenceFlow id="Flow_03d55ow" sourceRef="Gateway_1lsx5hg" targetRef="Activity_1vcfira" />
+    <bpmn:sequenceFlow id="Flow_0hk6pxh" sourceRef="Gateway_1lsx5hg" targetRef="Activity_0ices17" />
+    <bpmn:sequenceFlow id="Flow_0e57eor" sourceRef="Activity_0ices17" targetRef="Activity_1vcfira" />
+    <bpmn:sequenceFlow id="Flow_03dwk15" sourceRef="Activity_1vcfira" targetRef="Event_1tgwwj6" />
+    <bpmn:endEvent id="Event_1tgwwj6" name="Envio da notificação da conclusão da arrumação nas prateleiras">
+      <bpmn:incoming>Flow_03dwk15</bpmn:incoming>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_0ixuuqi" />
+    </bpmn:endEvent>
     <bpmn:startEvent id="Event_16001zt" name="Recebimento do pedido para arrumar a encomenda aceite">
       <bpmn:outgoing>Flow_01i6ljl</bpmn:outgoing>
       <bpmn:messageEventDefinition id="MessageEventDefinition_0cfg4bt" />
@@ -132,16 +141,7 @@
       <bpmn:outgoing>Flow_0pckxns</bpmn:outgoing>
       <bpmn:messageEventDefinition id="MessageEventDefinition_0zk3ivu" />
     </bpmn:intermediateThrowEvent>
-    <bpmn:sequenceFlow id="Flow_0pckxns" sourceRef="Event_0pcurrs" targetRef="Gateway_1lsx5hg" />
-    <bpmn:sequenceFlow id="Flow_03d55ow" sourceRef="Gateway_1lsx5hg" targetRef="Activity_1vcfira" />
-    <bpmn:sequenceFlow id="Flow_0hk6pxh" sourceRef="Gateway_1lsx5hg" targetRef="Activity_0ices17" />
-    <bpmn:sequenceFlow id="Flow_0e57eor" sourceRef="Activity_0ices17" targetRef="Activity_1vcfira" />
-    <bpmn:sequenceFlow id="Flow_03dwk15" sourceRef="Activity_1vcfira" targetRef="Event_1tgwwj6" />
     <bpmn:sequenceFlow id="Flow_01i6ljl" sourceRef="Event_16001zt" targetRef="Event_0pcurrs" />
-    <bpmn:endEvent id="Event_1tgwwj6" name="Envio da notificação da conclusão da arrumação nas prateleiras">
-      <bpmn:incoming>Flow_03dwk15</bpmn:incoming>
-      <bpmn:messageEventDefinition id="MessageEventDefinition_0ixuuqi" />
-    </bpmn:endEvent>
     <bpmn:textAnnotation id="TextAnnotation_0f916xz">
       <bpmn:text>Artigos guardados pela primeira vez</bpmn:text>
     </bpmn:textAnnotation>
@@ -420,11 +420,11 @@
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Participant_064xhfl_di" bpmnElement="Participant_064xhfl" isHorizontal="true">
-        <dc:Bounds x="1232" y="540" width="520" height="400" />
+        <dc:Bounds x="1232" y="530" width="520" height="410" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_1firnpj_di" bpmnElement="Lane_1firnpj" isHorizontal="true">
-        <dc:Bounds x="1262" y="540" width="490" height="150" />
+        <dc:Bounds x="1262" y="530" width="490" height="160" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_0bja2bf_di" bpmnElement="Lane_0bja2bf" isHorizontal="true">
@@ -442,18 +442,6 @@
         <dc:Bounds x="1422" y="800" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_1oy0ws3_di" bpmnElement="Event_16001zt">
-        <dc:Bounds x="1324" y="590" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="1302" y="633" width="81" height="66" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_0ryloh0_di" bpmnElement="Event_0pcurrs">
-        <dc:Bounds x="1454" y="590" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="1500" y="594" width="85" height="27" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_14hybno_di" bpmnElement="Event_1tgwwj6">
         <dc:Bounds x="1327" y="782" width="36" height="36" />
         <bpmndi:BPMNLabel>
@@ -464,8 +452,20 @@
         <dc:Bounds x="1631" y="714" width="100" height="55" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1oy0ws3_di" bpmnElement="Event_16001zt">
+        <dc:Bounds x="1324" y="582" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1302" y="619" width="81" height="66" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0ryloh0_di" bpmnElement="Event_0pcurrs">
+        <dc:Bounds x="1454" y="582" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1500" y="586" width="85" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_0pckxns_di" bpmnElement="Flow_0pckxns">
-        <di:waypoint x="1472" y="626" />
+        <di:waypoint x="1472" y="618" />
         <di:waypoint x="1472" y="723" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_03d55ow_di" bpmnElement="Flow_03d55ow">
@@ -487,13 +487,13 @@
         <di:waypoint x="1402" y="800" />
         <di:waypoint x="1363" y="800" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_01i6ljl_di" bpmnElement="Flow_01i6ljl">
-        <di:waypoint x="1360" y="608" />
-        <di:waypoint x="1454" y="608" />
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Association_0u0mayn_di" bpmnElement="Association_0u0mayn">
         <di:waypoint x="1581" y="748" />
         <di:waypoint x="1631" y="737" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_01i6ljl_di" bpmnElement="Flow_01i6ljl">
+        <di:waypoint x="1360" y="600" />
+        <di:waypoint x="1454" y="600" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="BPMNShape_0ocvg87" bpmnElement="Participant_0ln7ugs" isHorizontal="true">
         <dc:Bounds x="1232" y="170" width="518" height="260" />
@@ -712,7 +712,7 @@
         <di:waypoint x="720" y="294" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0qwfqwe_di" bpmnElement="Flow_0qwfqwe">
-        <di:waypoint x="1472" y="590" />
+        <di:waypoint x="1472" y="582" />
         <di:waypoint x="1472" y="400" />
         <di:waypoint x="1410" y="400" />
         <di:waypoint x="1410" y="342" />
@@ -724,7 +724,7 @@
         <di:waypoint x="1220" y="400" />
         <di:waypoint x="1220" y="480" />
         <di:waypoint x="1342" y="480" />
-        <di:waypoint x="1342" y="590" />
+        <di:waypoint x="1342" y="582" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_10ckhxb_di" bpmnElement="Flow_10ckhxb">
         <di:waypoint x="395" y="847" />
