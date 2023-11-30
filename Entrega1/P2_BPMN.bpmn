@@ -424,11 +424,11 @@
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_1firnpj_di" bpmnElement="Lane_1firnpj" isHorizontal="true">
-        <dc:Bounds x="1262" y="540" width="490" height="160" />
+        <dc:Bounds x="1262" y="540" width="490" height="150" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_0bja2bf_di" bpmnElement="Lane_0bja2bf" isHorizontal="true">
-        <dc:Bounds x="1262" y="700" width="490" height="240" />
+        <dc:Bounds x="1262" y="690" width="490" height="250" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Gateway_1lsx5hg_di" bpmnElement="Gateway_1lsx5hg" isMarkerVisible="true">
@@ -454,15 +454,15 @@
           <dc:Bounds x="1500" y="594" width="85" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="TextAnnotation_0f916xz_di" bpmnElement="TextAnnotation_0f916xz">
-        <dc:Bounds x="1631" y="714" width="100" height="55" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_14hybno_di" bpmnElement="Event_1tgwwj6">
         <dc:Bounds x="1327" y="782" width="36" height="36" />
         <bpmndi:BPMNLabel>
           <dc:Bounds x="1308" y="825" width="74" height="66" />
         </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_0f916xz_di" bpmnElement="TextAnnotation_0f916xz">
+        <dc:Bounds x="1631" y="714" width="100" height="55" />
+        <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_0pckxns_di" bpmnElement="Flow_0pckxns">
         <di:waypoint x="1472" y="626" />
@@ -741,8 +741,9 @@
         <di:waypoint x="1104" y="140" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0k99oq1_di" bpmnElement="Flow_0k99oq1">
-        <di:waypoint x="1327" y="800" />
-        <di:waypoint x="1220" y="800" />
+        <di:waypoint x="1345" y="782" />
+        <di:waypoint x="1345" y="710" />
+        <di:waypoint x="1220" y="710" />
         <di:waypoint x="1220" y="580" />
         <di:waypoint x="840" y="580" />
         <di:waypoint x="840" y="468" />
